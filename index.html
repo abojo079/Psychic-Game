@@ -17,10 +17,10 @@
   <div>
 <form>
 <p class="computer_guess">Guess what letter I'm thinking of:</p>
-<p class="user_wins">Wins: </p>
+<p>Wins: </p>
 <p class="user_losses">Losses:</p>
 <p class="remaining_tries"> Guesses Left:</p>
-<p class="User_guesses">Your Guesses So Far:<input type="text" name="number_guesses"></p>
+<p class="user_guesses">Your Guesses So Far:<input type="text" name="number_guesses"></p>
 </form>
        
 </div>
@@ -46,55 +46,70 @@ let counterWin = 0;
 
 if ((userChoice ==="f") && (cpChoices ==="f")  ) {
   
-   wins++;
+  counterWins++;
+  } 
 
 if ((userChoice ==="t") && (cpChoices ==="t")  ) {
   
- wins++;
-
+  counterWins++;
   
+  }
+
   if ((userChoice ==="g") && (cpChoices ==="g")  ) {
   
   wins++;
 
-  
+ }
   if ((userChoice ==="m") && (cpChoices ==="m")  ) {
   
-  wins++;
+  counterWins++;
 
-  if ((userChoice ==="r") && (cpChoices ==="r")  ) {
+ } 
+ if ((userChoice ==="r") && (cpChoices ==="r")  ) {
   
-  wins++;
-  if ((userChoice ==="y") && (cpChoices ==="y")  ) {
+  counterWins++;
+ } 
+
+ if ((userChoice ==="y") && (cpChoices ==="y")  ) {
   
-  wins++;
+  counterWins++;
+  }
+
   if ((userChoice ==="v") && (cpChoices ==="v")  ) {
   
-  wins++;
+  counterWins++;
+
+  }
 
   if ((userChoice ==="h") && (cpChoices ==="h")  ) {
   
-  wins++;
+  counterWins++;
 
+  } 
+  
   if ((userChoice ==="d") && (cpChoices ==="d")  ) {
   
-  wins++;
+  counterWins++;
 
-if else (())
+  } 
+  
+  else { (userChoice)
+    
+    counterLoss++;
+  
+  }
+
+//display wins and losses during 9 tries
+var win = 
+
+
+// stop after 9 tries and reset
+
+
 
 
 
 }
-
-let guess= 9;// stop after 9 tries and reset/(how) get user input using keypress store info in variable
-
-}
-
-
-
-
-
-
 
     </script>
 </body>
