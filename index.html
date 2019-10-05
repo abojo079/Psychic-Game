@@ -26,28 +26,74 @@
 </div>
 </div>
     <script type = "text/javascript"> 
-    
-    //     Your Guesses So Far: (the specific letters that the user typed. Display these until the user either wins or loses.//
-        
-       // 8. When the player wins, increase the Wins counter and start the game over again (without refreshing the page).//
-        
-      //  9. When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).//
+
+//user cliks on letter
+
+document.onkeyup = function(choice){
+var userChoice = choice.key;
 
 
 //computer chooses random letter on click
-
-function computerSelection(){
+let cpChoices= ["a","b","c", "d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
   
-var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+let cpSelection = cpChoices[Math.floor(Math.random() * cpChoices.length)];
+
+let counterWins = 0;
+
+//create counters //guesses correctly adds point to counterWin//guesses all nine incorrectly add point to counterLoss
+let counterLoss = 0;
+let counterWin = 0;
+
+if ((userChoice ==="f") && (cpChoices ==="f")  ) {
+  
+   wins++;
+
+if ((userChoice ==="t") && (cpChoices ==="t")  ) {
+  
+ wins++;
+
+  
+  if ((userChoice ==="g") && (cpChoices ==="g")  ) {
+  
+  wins++;
+
+  
+  if ((userChoice ==="m") && (cpChoices ==="m")  ) {
+  
+  wins++;
+
+  if ((userChoice ==="r") && (cpChoices ==="r")  ) {
+  
+  wins++;
+  if ((userChoice ==="y") && (cpChoices ==="y")  ) {
+  
+  wins++;
+  if ((userChoice ==="v") && (cpChoices ==="v")  ) {
+  
+  wins++;
+
+  if ((userChoice ==="h") && (cpChoices ==="h")  ) {
+  
+  wins++;
+
+  if ((userChoice ==="d") && (cpChoices ==="d")  ) {
+  
+  wins++;
+
+if else (())
+
+
+
+}
+
+let guess= 9;// stop after 9 tries and reset/(how) get user input using keypress store info in variable
 
 }
 
 
 
-//user cliks on letter
-let wins = 0; //guesses correctly adds point to COUNTER
-let loss= 0; //guesses all nine incorrectly add point goes to computer
-let guess= 9;// stop after 9 tries and reset
+
+
 
 
     </script>
