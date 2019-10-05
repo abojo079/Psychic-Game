@@ -14,13 +14,13 @@
 <body>
     <h2>The Psychic Game</h2>
 <div class="container">
-  <div>
+  <div id="psychic">
 <form>
-<p class="computer_guess">Guess what letter I'm thinking of:</p>
+<p>Guess what letter I'm thinking of:</p>
 <p>Wins: </p>
-<p class="user_losses">Losses:</p>
-<p class="remaining_tries"> Guesses Left:</p>
-<p class="user_guesses">Your Guesses So Far:</p>
+<p>Losses:</p>
+<p> Guesses Left:</p>
+<p>Your Guesses So Far:</p>
 </form>
        
 </div>
@@ -41,11 +41,13 @@ let options= ["a","b","c", "d","e","f","g","h","i","j","k","l","m","n","o","p","
   
 let cpChoices = options[Math.floor(Math.random() * options.length)];
 
-console.log(cpChoices);
 
 //create counters //guesses correctly adds point to counterWin//guesses all nine incorrectly add point to counterLoss
 let counterLoss = 0;
 let counterWin = 0;
+let reset=9;
+let userTries=0;
+
 
 //computer selections vs user selections wins/losses
 
@@ -73,45 +75,46 @@ if ((userChoice ==="t") && (cpChoices ==="t")  ) {
  if ((userChoice ==="r") && (cpChoices ==="r")  ) {
   
   counterWin++;
-  alert("Wins: " + counterWin);;
+
  } 
 
  if ((userChoice ==="y") && (cpChoices ==="y")  ) {
   
   counterWin++;
-  alert("Wins: " + counterWin);
+
  }
   if ((userChoice ==="v") && (cpChoices ==="v")  ) {
   
   counterWin++;
-  alert("Wins: " + counterWin);
+
   } 
 
   if ((userChoice ==="h") && (cpChoices ==="h")  ) {
   
   counterWin++;
-  alert("Wins: " + counterWin);
+
   } 
   
   if ((userChoice ==="d") && (cpChoices ==="d")  ) {
   
   counterWin++;
-  alert("Wins: " + counterWin);
+
   } 
   
-  else { (userChoice = null)// if user does not choose above after 9 tries counter loss ++ and reset
+  else { (userChoice !== cpChoices) && (reset > userTries)  // if user does not choose above after 9 tries counter loss ++ and reset
     
     counterLoss++;
-  
+
   }
 
-//display wins and losses during 9 tries
 
+let html = "<p> Guess what letter I'm thinking of: </p>" + 
+"<p>Wins:" + counterWin + "</p>" +
+"<p>Loss:" + counterLoss + "</p>" +
+"<p>Guesses Left: " + reset + "</p>"+
+"<p>Guesses so far: " + userChoice +  "</p>";
 
-
-
-
-
+document.querySelector('#psychic').innerHTML = html;
 
 }
 
