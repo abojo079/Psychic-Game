@@ -20,7 +20,7 @@
 <p>Wins: </p>
 <p class="user_losses">Losses:</p>
 <p class="remaining_tries"> Guesses Left:</p>
-<p class="user_guesses">Your Guesses So Far:<input type="text" name="number_guesses"></p>
+<p class="user_guesses">Your Guesses So Far:</p>
 </form>
        
 </div>
@@ -29,81 +29,85 @@
 
 //user cliks on letter
 
-document.onkeyup = function(choice){
-var userChoice = choice.key;
+document.onkeyup = function(){
+
+var userChoice = String.fromCharCode(event.keyCode).toLowerCase();
+
+console.log(userChoice); //a way to only choose letters?
 
 
 //computer chooses random letter on click
-let cpChoices= ["a","b","c", "d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+let options= ["a","b","c", "d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
   
-let cpSelection = cpChoices[Math.floor(Math.random() * cpChoices.length)];
+let cpChoices = options[Math.floor(Math.random() * options.length)];
 
-let counterWins = 0;
+console.log(cpChoices);
 
 //create counters //guesses correctly adds point to counterWin//guesses all nine incorrectly add point to counterLoss
 let counterLoss = 0;
 let counterWin = 0;
 
+//computer selections vs user selections wins/losses
+
 if ((userChoice ==="f") && (cpChoices ==="f")  ) {
-  
-  counterWins++;
+  counterWin++;
+  alert("Wins: " + counterWin);
   } 
 
 if ((userChoice ==="t") && (cpChoices ==="t")  ) {
   
-  counterWins++;
-  
+  counterWin++;
+  alert("Wins: " + counterWin);
   }
 
   if ((userChoice ==="g") && (cpChoices ==="g")  ) {
   
-  wins++;
-
+  counterWin++;
+  alert("Wins: " + counterWin);
  }
   if ((userChoice ==="m") && (cpChoices ==="m")  ) {
   
-  counterWins++;
-
+  counterWin++;
+  alert("Wins: " + counterWin);
  } 
  if ((userChoice ==="r") && (cpChoices ==="r")  ) {
   
-  counterWins++;
+  counterWin++;
+  alert("Wins: " + counterWin);;
  } 
 
  if ((userChoice ==="y") && (cpChoices ==="y")  ) {
   
-  counterWins++;
-  }
-
+  counterWin++;
+  alert("Wins: " + counterWin);
+ }
   if ((userChoice ==="v") && (cpChoices ==="v")  ) {
   
-  counterWins++;
-
-  }
+  counterWin++;
+  alert("Wins: " + counterWin);
+  } 
 
   if ((userChoice ==="h") && (cpChoices ==="h")  ) {
   
-  counterWins++;
-
+  counterWin++;
+  alert("Wins: " + counterWin);
   } 
   
   if ((userChoice ==="d") && (cpChoices ==="d")  ) {
   
-  counterWins++;
-
+  counterWin++;
+  alert("Wins: " + counterWin);
   } 
   
-  else { (userChoice)
+  else { (userChoice = null)// if user does not choose above after 9 tries counter loss ++ and reset
     
     counterLoss++;
   
   }
 
 //display wins and losses during 9 tries
-var win = 
 
 
-// stop after 9 tries and reset
 
 
 
